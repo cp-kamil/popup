@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .popup-form {
+      display: none;
+      background: #000;
+      color: #fff;
+      padding: 1rem;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .open-popup-form {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="violet-button">Try out</button>
+  <button class="violet-button">Try out</button>
+  <button class="violet-button">Try out</button>
+  <button class="white-button">Try out</button>
+  <div id="popup-form" class="popup-form">
+    <a href="javascript:void(0);" class="close-popup-form">zamknij</a>
+    <div class="container">
+      <h2>Zapraszamy do kontaktu</h2>
+      <p>Jesteś zainteresowany naszymi rozwiązaniami?
+        <br>Masz nurtujące Cię pytania, pomysł na rozszerzenie oprogramowania HCL Connections, a może jesteś zainteresowany dostępem do środowiska demo?
+        <br>Nie wahaj się, skontaktuj się z nami już dziś!</p>
+      <p><a href="https://solutions.computerplus.com.pl/en/contact">Kontakt</a></p>
+    </div>
+    <script>
+      document.querySelector(".violet-button").onclick = function () {
+        document.querySelector(".popup-form").classList.add("open-popup-form");
+      };
+      document.querySelector(".white-button").onclick = function () {
+        document.querySelector(".popup-form").classList.add("open-popup-form");
+      };
+      document.querySelector(".close-popup-form").onclick = function () {
+        document.querySelector(".popup-form").classList.remove("open-popup-form");
+      };
+    </script>
+</body>
+
+</html>
